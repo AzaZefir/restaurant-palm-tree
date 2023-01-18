@@ -1,11 +1,14 @@
 import React from 'react'
+import './AboutUsPage.css'
+import aboutFirstImg from '../common/image/about-page-firstPic.png'
+import aboutSecondImg from '../common/image/about-page-firstPic.png'
 import Footer from '../footer/Footer'
 import Header from '../header/Header'
 
 const AboutUsPage = () => {
   return (
     <div class="wrapper">
-      <Header/>
+      {/* <Header/> */}
       <main>
         <section class="about d-flex">
           <span class="about-greeting">About us</span>
@@ -13,7 +16,7 @@ const AboutUsPage = () => {
         <section class="about-info">
           <div class="container">
             <div class="about-info_top d-flex">
-              <img src="./image/about-page-firstPic.png" alt="" />
+              <img src={aboutFirstImg} alt="" />
               <div>
                 <span>Идея создания</span>
                 <p>
@@ -29,7 +32,7 @@ const AboutUsPage = () => {
               </div>
             </div>
             <div class="about-info_bottom d-flex">
-              <img src="./image/about-page-secondPic.png" alt="" />
+              <img src={aboutSecondImg} alt="" />
               <div>
                 <span>Основатель</span>
                 <p>
@@ -47,7 +50,7 @@ const AboutUsPage = () => {
           </div>
         </section>
       </main>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
