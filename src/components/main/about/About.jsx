@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const About = () => {
   return (
     <section class="about d-flex">
       <span class="about-greeting">Welcome to The Restaurant </span>
       <div class="about-greeting_links d-flex">
-        <a href="./aboutUs.html">
+        <Link to="/aboutUs">
           <span class="button button--cart d-flex">О НАС</span>
-        </a>
-        <a href="#oftenOrder">
+        </Link>
+        <Link to="/menu">
           <span class="button button--cart d-flex">СДЕЛАТЬ ЗАКАЗ</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

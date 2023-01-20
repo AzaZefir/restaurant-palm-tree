@@ -1,17 +1,18 @@
 import logo from '../common/image/logo.svg'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header class="header">
       <div class="container d-flex">
-        <a href="">
+        <Link to="/">
           <img src={logo} alt="" />
-        </a>
+        </Link>
         <div class="header-links d-flex">
-          <a href="./contact.html">Контакты</a>
-          <a href="./ourMenu.html">Меню</a>
+          <Link to="/contacts">Контакты</Link>
+          <Link to="/menu">Меню</Link>
           <div class="header__cart">
-            <a href="./basket.html" class="button button--cart">
+            <Link to="/basket" class="button button--cart">
               <span>520 сом</span>
               <div class="button__delimiter"></div>
               <svg
@@ -43,7 +44,7 @@ const Header = () => {
                 />
               </svg>
               <span>3</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import './Basket.css'
+import { Link } from 'react-router-dom';
 
 const Basket = () =>{
   return (
@@ -340,7 +341,7 @@ const Basket = () =>{
                   <span> Сумма заказа: <b>900 сом</b> </span>
                 </div>
                 <div className="cart__bottom-buttons">
-                  <a href="./index.html" className="button button--outline button--add go-back-btn">
+                  <Link to="/menu" className="button button--outline button--add go-back-btn">
                     <svg
                       width="8"
                       height="14"
@@ -356,7 +357,7 @@ const Basket = () =>{
                     </svg>
 
                     <span>Вернуться назад</span>
-                  </a>
+                  </Link>
                   <div className="button pay-btn">
                     <span>Оплатить сейчас</span>
                   </div>

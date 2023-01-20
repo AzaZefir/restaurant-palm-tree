@@ -197,6 +197,9 @@ figure.effect-text-one img {
 .slider-image img {
   width: 100%;
 }
+/* .slick-slider {
+  display: flex !important;
+} */
 figure.effect-text-one figcaption {
   top: auto;
   bottom: 0;
