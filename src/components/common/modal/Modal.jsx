@@ -1,17 +1,18 @@
-import React from 'react'
-import './Modal.css'
-import modalIcon from '../../common/image/modal.png'
-import Button from '../button/Button'
+import React from 'react';
+import './Modal.css';
+import { data } from '../../data/data';
 
-export const Modal = (props) => {
+export const Modal = ({ activeModal, setActiveModal,modalId }) => {
   return (
-    <div className="modal-wrapper">
-      <div className="modal d-flex">
+    <div
+      className={activeModal ? 'modal-wrapper active' : 'modal-wrapper'}
+      onClick={() => setActiveModal(true)}>
+      <div className="modal d-flex" onClick={e => e.stopPropagation()}>
         <div className="d-flex">
-          <img src={modalIcon} alt="" />
+          <img src={data[0].oftenOrderCards[modalId].img} alt="" />
           <div>
             <div className="modal-info d-flex">
-              <h3 className="pizza-block__title">Карбонара</h3>
+              <h3 className="pizza-block__title">{data[0].oftenOrderCards[modalId].name}</h3>
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">тонкое</li>
@@ -53,14 +54,10 @@ export const Modal = (props) => {
             </div>
           </div>
         </div>
-        <Button></Button>
-        <Button>edit</Button>
-        {/* Button(edit)
-        Button(save) */}
         <button className="button modal-btn">Добавить</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // export default Modal

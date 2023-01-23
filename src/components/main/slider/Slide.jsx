@@ -1,5 +1,5 @@
 import React from 'react';
-import sliderIcon from '../../common/image/slider-img1.png';
+// import sliderIcon from '../../common/image/slider-img1.png';
 import sliderLeftIcon from '../../common/image/slider-left.svg';
 import sliderRight from '../../common/image/slider0right.svg';
 import Slider from 'react-slick';

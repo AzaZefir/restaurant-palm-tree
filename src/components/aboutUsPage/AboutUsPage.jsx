@@ -2,8 +2,6 @@ import React from 'react'
 import './AboutUsPage.css'
 import aboutFirstImg from '../common/image/about-page-firstPic.png'
 import aboutSecondImg from '../common/image/about-page-firstPic.png'
-import Footer from '../footer/Footer'
-import Header from '../header/Header'
 
 const AboutUsPage = () => {
   return (

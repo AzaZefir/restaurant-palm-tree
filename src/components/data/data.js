@@ -1,27 +1,37 @@
+import slider1 from '../common/image/slider-img1.png'
+import cardImg from '../common/image/about-bg.png'
+
 export const data = [
   {
     oftenOrderCards:[
       {
-        id: 1,
+        id: 0,
         name: 'Пицца из половинок',
+        img:cardImg,
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
         price: 580,
       },
       {
-        id: 2,
-        name: 'Пицца из половинок',
+        id: 1,
+        name: 'Бургер-пицца',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
         price: 480,
       },
       {
-        id: 3,
-        name: 'Пицца из половинок',
+        id: 2,
+        name: 'Сырная 🌱',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
         price: 600,
       },
       {
+        id: 3,
+        name: 'Маргарита 🌱',
+        text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
+        price: 650,
+      },
+      {
         id: 4,
-        name: 'Пицца из половинок',
+        name: 'Мексиканская 🌶️🌶️',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
         price: 650,
       },
@@ -67,12 +77,6 @@ export const data = [
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
         price: 650,
       },
-      {
-        id: 12,
-        name: 'Пицца из половинок',
-        text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
-      },
     
     ]
   },
@@ -80,22 +84,22 @@ export const data = [
     sliderCardData:[
       {
         id:1,
-        img:'/image/slider-img1.png',
+        img:slider1,
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         id:2,
-        img:'/image/slider-img1.png',
+        img:slider1,
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         id:3,
-        img:'/image/slider-img1.png',
+        img:slider1,
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         id:4,
-        img:'/image/slider-img1.png',
+        img:slider1,
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
 
