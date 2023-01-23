@@ -20,6 +20,7 @@
 }
 .about-info_top {
   align-items: flex-start;
+  margin-bottom: 60px;
 }
 .about-info_top > div{
   padding-left: 30px;

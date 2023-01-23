@@ -1,4 +1,4 @@
-.about {
+.about-menu-bg {
   background-image: url('../common/image/ourMenu-bg.png');
 }
 .categories ul {
@@ -103,4 +103,5 @@
 .pagination a{
   padding: 10px 15px;
   text-decoration: none;
+  margin: 0 10px;
 }

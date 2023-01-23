@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './About.css'
 
 export const About = () => {
   return (
-    <section class="about d-flex">
+    <section class="about about-bg d-flex">
       <span class="about-greeting">Welcome to The Restaurant </span>
       <div class="about-greeting_links d-flex">
         <Link to="/aboutUs">

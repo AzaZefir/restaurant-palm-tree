@@ -1,12 +1,13 @@
 import logo from '../common/image/logo.svg'
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
   return (
     <header class="header">
       <div class="container d-flex">
         <Link to="/">
-          <img src={logo} alt="" />
+          <img className='header__logo' src={logo} alt="" />
         </Link>
         <div class="header-links d-flex">
           <Link to="/contacts">Контакты</Link>

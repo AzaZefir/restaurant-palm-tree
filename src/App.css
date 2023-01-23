@@ -58,48 +58,11 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.delimetr {
-  width: 2px;
-  height: 50px;
-  background-color: #000000;
-}
-.header {
-  height: 115px;
-  background: #000000;
-  position: sticky;
-  top: 0;
-  z-index: 7;
-}
-.header > div {
-  height: 100%;
-}
-.header-links {
-  width: 45%;
-}
-.header-links,
-.header-links a,
-.about-greeting_links a,
-.often-order_btn {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 0px;
-  color: #ffffff;
-  text-decoration: none;
-}
-.header-links_btn,
-.about-greeting_links span,
-.often-order_btn {
-  background: #673ab7;
-  width: 220px;
-  height: 70px;
-  padding: 30px 20px;
-  cursor: pointer;
-}
-.about {
-  background-image: url('./components/common/image/about-bg.png');
+.about{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-blend-mode: darken;
   height: 80vh;
   flex-direction: column;
   justify-content: space-evenly;
@@ -116,6 +79,31 @@ p {
 .about-greeting_links span {
   justify-content: center;
 }
+.delimetr {
+  width: 2px;
+  height: 50px;
+  background-color: #000000;
+}
+.header-links,
+.header-links a,
+.about-greeting_links a,
+.often-order_btn {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 0px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.header-links_btn,
+.about-greeting_links span,
+.often-order_btn {
+  background: #673ab7;
+  width: 220px;
+  height: 70px;
+  padding: 30px 20px;
+  cursor: pointer;
+}
+
 
 .slider {
   padding: 50px 20px;
@@ -239,10 +227,12 @@ figure.effect-text-one:hover p {
 .slider-right {
   cursor: pointer;
 }
+.hero .container{
+  margin: 50px auto;
+}
 .hero-description {
   flex-direction: column;
   padding: 40px 0;
-  margin-bottom: 50px;
 }
 .hero-description p {
   height: 200px;
@@ -284,7 +274,7 @@ figure.effect-text-one:hover p {
 }
 .often-order__card {
   width: 30%;
-  height: 65vh;
+  height: 75vh;
   border: 5px solid #673ab7;
   margin: 30px 0;
   flex-direction: column;

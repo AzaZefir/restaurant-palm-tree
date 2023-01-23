@@ -6,7 +6,7 @@ const OurMenuPage = () => {
   return (
     <div className="wrapper">
       <main>
-        <section className="about d-flex">
+        <section className="about about-menu-bg d-flex">
           <span className="about-greeting">Our menu</span>
         </section>
         <section className="search-block">
