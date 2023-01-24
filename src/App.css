@@ -288,17 +288,23 @@ figure.effect-text-one:hover p {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./components/common/image/card-img.jpg');
   background-size: cover;
   overflow: hidden;
+  position: relative;
 }
 .often-order__card > div {
   flex-direction: column;
 }
 .often-order__card p,
-.often-order__card span {
+.often-order__card span
+ {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
+  /* z-index: 2; */
+}
+.often-order__card h5{
+  /* z-index: 2; */
 }
 .footer {
   background-image: url('./components/common/image/footer-bg.png');

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from '../../common/modal/Modal';
+import './OftenOrder.css'
 
 const Card = ({ setActiveModal, item, modalId, setModalId,activeModal,index }) => {
   const onModalClick = () => {
@@ -10,7 +11,7 @@ const Card = ({ setActiveModal, item, modalId, setModalId,activeModal,index }) =
     <>
       <div onClick={onModalClick} key={item.id} class="often-order__card d-flex">
         <div class="d-flex">
-          {/* <img src={item.img} alt="" /> */}
+          <img className='modalImage' src={item.cardImg} alt="" />
           <h5>{item.name}</h5>
           <p>{item.text}</p>
         </div>

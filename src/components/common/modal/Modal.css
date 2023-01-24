@@ -20,7 +20,7 @@
   width: 70%;
   margin: 120px auto;
   padding: 30px;
-  background: #ffc878;
+  background: #ffffff;
   border-radius: 30px;
   flex-direction: column;
 }
@@ -28,8 +28,13 @@
   flex-direction: column;
   align-items: center;
 }
-.modal >div> img {
+.modal > div >div:first-child{
   width: 35%;
+}
+.modal > div >div:first-child img{
+  width: 100%;
+  position: relative;
+  top: 30px;
 }
 .modal-choose-type {
   margin: 20px 0;
@@ -56,7 +61,7 @@
   padding-top: 10px;
 }
 .modal-btn{
-  background: #fb7135;
+  background: #673ab7;
   width: 200px;
   height: 50px;
   padding: 14px 10px;

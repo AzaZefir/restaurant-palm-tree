@@ -1,6 +1,10 @@
 import React from 'react';
 import './Modal.css';
 import { data } from '../../data/data';
+import modalOne from '../../common/image/modal-t.svg'
+import modalTwo from '../../common/image/modal-t1.svg'
+import modalThree from '../../common/image/modal-t2.svg'
+import modalFour from '../../common/image/modal-t3.svg'
 
 export const Modal = ({ activeModal, setActiveModal,modalId }) => {
   return (
@@ -9,7 +13,10 @@ export const Modal = ({ activeModal, setActiveModal,modalId }) => {
       onClick={() => setActiveModal(true)}>
       <div className="modal d-flex" onClick={e => e.stopPropagation()}>
         <div className="d-flex">
-          <img src={data[0].oftenOrderCards[modalId].img} alt="" />
+          <div>
+            <img src={data[0].oftenOrderCards[modalId].modalImage} alt="" />
+          </div>
+          
           <div>
             <div className="modal-info d-flex">
               <h3 className="pizza-block__title">{data[0].oftenOrderCards[modalId].name}</h3>
@@ -29,25 +36,25 @@ export const Modal = ({ activeModal, setActiveModal,modalId }) => {
             <div className="modal-choose-type d-flex">
               <div>
                 <div>
-                  <img src="./image/modal-t.svg" alt="" />
+                  <img src={modalOne} alt="" />
                 </div>
                 <p>Ветчина из цыпленка</p>
               </div>
               <div>
                 <div>
-                  <img src="./image/modal-t1.svg" alt="" />
+                  <img src={modalTwo} alt="" />
                 </div>
                 <p>Ветчина из цыпленка</p>
               </div>
               <div>
                 <div>
-                  <img src="./image/modal-t2.svg" alt="" />
+                  <img src={modalThree} alt="" />
                 </div>
                 <p>Ветчина из цыпленка</p>
               </div>
               <div>
                 <div>
-                  <img src="./image/modal-t3.svg" alt="" />
+                  <img src={modalFour} alt="" />
                 </div>
                 <p>Ветчина из цыпленка</p>
               </div>
