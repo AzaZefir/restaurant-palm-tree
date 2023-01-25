@@ -6,7 +6,17 @@ import modalTwo from '../../common/image/modal-t1.svg'
 import modalThree from '../../common/image/modal-t2.svg'
 import modalFour from '../../common/image/modal-t3.svg'
 
-export const Modal = ({ activeModal, setActiveModal,modalId }) => {
+export const Modal = ({ activeModal, setActiveModal,modalId,onAddData,dataId,name,modalImage,price }) => {
+  const onAdd= ()=>{
+    const addedData ={
+      dataId,
+      name,
+      modalImage,
+      price
+    }
+    onAddData(addedData)
+    console.log(addedData);
+  }
   return (
     <div
       className={activeModal ? 'modal-wrapper active' : 'modal-wrapper'}
@@ -61,7 +71,7 @@ export const Modal = ({ activeModal, setActiveModal,modalId }) => {
             </div>
           </div>
         </div>
-        <button className="button modal-btn">Добавить</button>
+        <button className="button modal-btn" onClick={onAdd}>Добавить</button>
       </div>
     </div>
   );

@@ -4,13 +4,13 @@ import OftenOrder from './oftenOrder/OftenOrder';
 // import { Slide } from './slider/Slide';
 import { Slide } from './slider/Slide';
 
-const Main = () => {
+const Main = ({db,setDb,onAddData}) => {
   return (
     <main>
       <About />
       <Slide />
       <Hero />
-      <OftenOrder />
+      <OftenOrder db={db} setDb={setDb} onAddData={onAddData}/>
     </main>
   );
 };
