@@ -268,14 +268,12 @@ figure.effect-text-one:hover p {
 .often-order__cards {
   flex-wrap: wrap;
 }
-.often-order__card {
-  transition: all 0.3s ease-in-out;
-}
 .often-order__card:hover {
   transform: scale(1.1); /* Увеличиваем масштаб */
   cursor: pointer;
 }
 .often-order__card {
+  transition: 1s ease;
   width: 30%;
   height: 75vh;
   border: 5px solid #673ab7;
@@ -284,8 +282,8 @@ figure.effect-text-one:hover p {
   justify-content: space-around;
   align-items: flex-start;
   padding: 25px;
-  background-position: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./components/common/image/card-img.jpg');
+  /* background-position:; */
+  background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./components/common/image/card-img.jpg'), center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -301,10 +299,6 @@ figure.effect-text-one:hover p {
   line-height: 24px;
   text-align: center;
   color: #ffffff;
-  /* z-index: 2; */
-}
-.often-order__card h5{
-  /* z-index: 2; */
 }
 .footer {
   background-image: url('./components/common/image/footer-bg.png');

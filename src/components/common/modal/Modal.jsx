@@ -13,7 +13,7 @@ export const Modal = ({ activeModal, setActiveModal,modalId }) => {
       onClick={() => setActiveModal(true)}>
       <div className="modal d-flex" onClick={e => e.stopPropagation()}>
         <div className="d-flex">
-          <div>
+          <div className='modal__image'>
             <img src={data[0].oftenOrderCards[modalId].modalImage} alt="" />
           </div>
           
