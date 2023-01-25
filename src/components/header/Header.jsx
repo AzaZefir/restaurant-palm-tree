@@ -4,18 +4,18 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <header class="header">
-      <div class="container d-flex">
+    <header className="header">
+      <div className="container d-flex">
         <Link to="/">
           <img className='header__logo' src={logo} alt="" />
         </Link>
-        <div class="header-links d-flex">
+        <div className="header-links d-flex">
           <Link to="/contacts">Контакты</Link>
           <Link to="/menu">Меню</Link>
-          <div class="header__cart">
-            <Link to="/basket" class="button button--cart">
+          <div className="header__cart">
+            <Link to="/basket" className="button button--cart">
               <span>520 сом</span>
-              <div class="button__delimiter"></div>
+              <div className="button__delimiter"></div>
               <svg
                 width="18"
                 height="18"

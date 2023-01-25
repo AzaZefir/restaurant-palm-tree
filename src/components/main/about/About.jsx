@@ -4,14 +4,14 @@ import './About.css'
 
 export const About = () => {
   return (
-    <section class="about about-bg d-flex">
-      <span class="about-greeting">Welcome to The Restaurant </span>
-      <div class="about-greeting_links d-flex">
+    <section className="about about-bg d-flex">
+      <span className="about-greeting">Welcome to The Restaurant </span>
+      <div className="about-greeting_links d-flex">
         <Link to="/aboutUs">
-          <span class="button button--cart d-flex">О НАС</span>
+          <span className="button button--cart d-flex">О НАС</span>
         </Link>
         <Link to="/menu">
-          <span class="button button--cart d-flex">СДЕЛАТЬ ЗАКАЗ</span>
+          <span className="button button--cart d-flex">СДЕЛАТЬ ЗАКАЗ</span>
         </Link>
       </div>
     </section>

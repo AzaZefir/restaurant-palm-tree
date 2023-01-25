@@ -9,8 +9,8 @@ const Card = ({ setActiveModal, item, modalId, setModalId,activeModal,index }) =
   };
   return (
     <>
-      <div onClick={onModalClick} key={item.id} class="often-order__card d-flex">
-        <div class="d-flex">
+      <div onClick={onModalClick} key={item.id} className="often-order__card d-flex">
+        <div className="d-flex">
           <img className='modalImage' src={item.cardImg} alt="" />
           <h5>{item.name}</h5>
           <p>{item.text}</p>

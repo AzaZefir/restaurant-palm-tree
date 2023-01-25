@@ -11,10 +11,10 @@ const OftenOrder = () => {
 
   
   return (
-    <section class="often-order">
-      <div class="container d-flex" id="oftenOrder">
+    <section className="often-order">
+      <div className="container d-flex" id="oftenOrder">
         <h3>Часто заказывают</h3>
-        <div class="often-order__cards d-flex">
+        <div className="often-order__cards d-flex">
           {data[0].oftenOrderCards.map((item) => (
             <Card
               key={item.id}
@@ -29,7 +29,7 @@ const OftenOrder = () => {
           ))}
         </div>
         <Link to="/menu">
-          <span class="button button--outline">Показать все меню</span>{' '}
+          <span className="button button--outline">Показать все меню</span>{' '}
         </Link>
       </div>
     </section>

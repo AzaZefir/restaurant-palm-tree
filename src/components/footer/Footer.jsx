@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="container d-flex">
+    <footer className="footer">
+      <div className="container d-flex">
         <p>
           Cliche kogi tote bag leggings, street art bushwick readymade schlitz vinyl. Tacos green
           juice kitsch bicycle rights drinking vinegar humblebrag coloring book pour-over palo santo

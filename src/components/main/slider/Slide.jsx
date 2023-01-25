@@ -24,7 +24,7 @@ export const Slide = () => {
         <div className="slider-image">
           <Slider {...settings}>
             {data[1].sliderCardData.map((item) => (
-              <div className="hover-text-one">
+              <div key={item.id} className="hover-text-one">
                 <figure className="effect-text-one">
                   <img src={item.img} alt="" />
                   <figcaption>

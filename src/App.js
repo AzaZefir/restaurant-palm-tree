@@ -9,18 +9,17 @@ import OurMenuPage from './components/ourMenuPage/OurMenuPage';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  
   return (
-    <div class="wrapper">
-      <Header/>
+    <div className="wrapper">
+      <Header />
       <Routes>
-        <Route path='/' element={<Main/>}/>
-        <Route path='/menu' element={<OurMenuPage/>}/>
-        <Route path='/contacts' element={<Contact/>}/>
-        <Route path='/basket' element={<Basket/>}/>
-        <Route path='/aboutUs' element={<AboutUsPage/>}/>
+        <Route path="/" element={<Main />} />
+        <Route path="/menu" element={<OurMenuPage />} />
+        <Route path="/contacts" element={<Contact />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="/aboutUs" element={<AboutUsPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
