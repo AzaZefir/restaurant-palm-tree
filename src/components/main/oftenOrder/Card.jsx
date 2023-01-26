@@ -14,6 +14,7 @@ const Card = ({
   name,
   modalImage,
   price,
+  count
 }) => {
   const onModalClick = () => {
     setActiveModal(false);
@@ -30,6 +31,7 @@ const Card = ({
         <span>от {item.price} сом</span>
       </div>
       <Modal
+      count={count}
         dataId={id}
         name={name}
         modalImage={modalImage}

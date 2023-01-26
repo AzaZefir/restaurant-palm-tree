@@ -6,15 +6,17 @@ import modalTwo from '../../common/image/modal-t1.svg'
 import modalThree from '../../common/image/modal-t2.svg'
 import modalFour from '../../common/image/modal-t3.svg'
 
-export const Modal = ({ activeModal, setActiveModal,modalId,onAddData,dataId,name,modalImage,price }) => {
+export const Modal = ({ activeModal, setActiveModal,modalId,setModalId,onAddData,dataId,name,modalImage,price,count }) => {
   const onAdd= ()=>{
     const addedData ={
       dataId,
       name,
       modalImage,
-      price
+      price,
+      count
     }
     onAddData(addedData)
+    setModalId(modalId)
     console.log(addedData);
   }
   return (
