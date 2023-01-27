@@ -11,31 +11,53 @@ import { useState } from 'react';
 import { data } from './components/data/data';
 
 function App() {
-  const [db,setDb] = useState(data[0].oftenOrderCards)
-  const [emptyBasketData, setEmptyBasketData] = useState([])
+  const [db, setDb] = useState(data[0].oftenOrderCards);
+  const [emptyBasketData, setEmptyBasketData] = useState([]);
 
-  const totalPrice = emptyBasketData.reduce((prevVal, curVal) => prevVal + curVal.total * curVal.price, 0 )
-  const totalCount = emptyBasketData.reduce((prevVal, curVal) => prevVal + curVal.total * curVal.count, 0 )
+  const totalPrice = emptyBasketData.reduce(
+    (prevVal, curVal) => prevVal + curVal.total * curVal.price,
+    0,
+  );
+  const totalCount = emptyBasketData.reduce(
+    (prevVal, curVal) => prevVal + curVal.total * curVal.count,
+    0,
+  );
 
   const onAddData = (item) => {
-    const existData = emptyBasketData.find(el=> el.id === item.id)
-    if(existData){
-      const newData = emptyBasketData.map(el=> el.id === item.id ? {...existData, total: existData.total + 1}: el)
-      setEmptyBasketData(newData)
-    }else{
-      const newData = [...emptyBasketData, {...item, total: 1}]
-      setEmptyBasketData(newData)
+    const existData = emptyBasketData.find((el) => el.id === item.id);
+    if (existData) {
+      const newData = emptyBasketData.map((el) =>
+        el.id === item.id ? { ...existData, total: existData.total + 1 } : el,
+      );
+      setEmptyBasketData(newData);
+    } else {
+      const newData = [...emptyBasketData, { ...item, total: 1 }];
+      setEmptyBasketData(newData);
     }
+  };
+  const onClearCardData = () =>{
+    setEmptyBasketData([])
   }
 
   return (
     <div className="wrapper">
-      <Header totalPrice={totalPrice} totalCount={totalCount}/>
+      <Header totalPrice={totalPrice} totalCount={totalCount} />
       <Routes>
-        <Route path="/" element={<Main onAddData={onAddData} db={db} setDb={setDb}/>} />
+        <Route path="/" element={<Main onAddData={onAddData} db={db} setDb={setDb} />} />
         <Route path="/menu" element={<OurMenuPage />} />
         <Route path="/contacts" element={<Contact />} />
-        <Route path="/basket" element={<Basket emptyBasketData={emptyBasketData}/>} />
+        <Route
+          path="/basket"
+          element={
+            <Basket
+              onClearCardData={onClearCardData}
+              onAddData={onAddData}
+              totalPrice={totalPrice}
+              totalCount={totalCount}
+              emptyBasketData={emptyBasketData}
+            />
+          }
+        />
         <Route path="/aboutUs" element={<AboutUsPage />} />
       </Routes>
       <Footer />

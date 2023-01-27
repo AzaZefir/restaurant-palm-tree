@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Modal } from '../../common/modal/Modal';
 import Card from './Card';
 
-const OftenOrder = ({ db, setDb, onAddData }) => {
+const OftenOrder = ({ db, onAddData }) => {
   const [activeModal, setActiveModal] = useState(true);
-  const [modalId, setModalId] = useState(0);
+  const [modalId, setModalId] = useState(null);
 
+  const onModalClick = (index) => {
+    setModalId(index);
+    setActiveModal(false);
+  };
   return (
     <section className="often-order">
       <div className="container d-flex" id="oftenOrder">
@@ -13,6 +18,7 @@ const OftenOrder = ({ db, setDb, onAddData }) => {
         <div className="often-order__cards d-flex">
           {db.map((item) => (
             <Card
+              onModalClick={onModalClick}
               onAddData={onAddData}
               key={item.id}
               modalId={modalId}
@@ -25,6 +31,12 @@ const OftenOrder = ({ db, setDb, onAddData }) => {
             />
           ))}
         </div>
+        <Modal
+        onAddData={onAddData}
+        modalId={modalId}
+        activeModal={activeModal}
+        setActiveModal={setActiveModal}
+      />
         <Link to="/menu">
           <span className="button button--outline">Показать все меню</span>{' '}
         </Link>

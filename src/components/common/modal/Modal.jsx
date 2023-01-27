@@ -1,37 +1,36 @@
 import React from 'react';
 import './Modal.css';
 import { data } from '../../data/data';
-import modalOne from '../../common/image/modal-t.svg'
-import modalTwo from '../../common/image/modal-t1.svg'
-import modalThree from '../../common/image/modal-t2.svg'
-import modalFour from '../../common/image/modal-t3.svg'
+import modalOne from '../../common/image/modal-t.svg';
+import modalTwo from '../../common/image/modal-t1.svg';
+import modalThree from '../../common/image/modal-t2.svg';
+import modalFour from '../../common/image/modal-t3.svg';
 
-export const Modal = ({ activeModal, setActiveModal,modalId,setModalId,onAddData,dataId,name,modalImage,price,count }) => {
-  const onAdd= ()=>{
-    const addedData ={
-      dataId,
-      name,
-      modalImage,
-      price,
-      count
-    }
-    onAddData(addedData)
-    setModalId(modalId)
+export const Modal = ({ activeModal, setActiveModal, modalId, onAddData }) => {
+  const onAdd = () => {
+    const addedData = {
+      id: modalId.id,
+      name: modalId.name,
+      modalImage: modalId.modalImage,
+      price: modalId.price,
+      count: modalId.count,
+    };
+    onAddData(addedData);
     console.log(addedData);
-  }
+  };
   return (
     <div
       className={activeModal ? 'modal-wrapper active' : 'modal-wrapper'}
       onClick={() => setActiveModal(true)}>
-      <div className="modal d-flex" onClick={e => e.stopPropagation()}>
+      <div className="modal d-flex" onClick={(e) => e.stopPropagation()}>
         <div className="d-flex">
-          <div className='modal__image'>
-            <img src={data[0].oftenOrderCards[modalId].modalImage} alt="" />
+          <div className="modal__image">
+            <img src={modalId && modalId.modalImage} alt="" />
           </div>
-          
+
           <div>
             <div className="modal-info d-flex">
-              <h3 className="pizza-block__title">{data[0].oftenOrderCards[modalId].name}</h3>
+              <h3 className="pizza-block__title">{modalId && modalId.name}</h3>
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">тонкое</li>
@@ -73,7 +72,9 @@ export const Modal = ({ activeModal, setActiveModal,modalId,setModalId,onAddData
             </div>
           </div>
         </div>
-        <button className="button modal-btn" onClick={onAdd}>Добавить</button>
+        <button className="button modal-btn" onClick={onAdd}>
+          Добавить
+        </button>
       </div>
     </div>
   );
