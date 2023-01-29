@@ -32,11 +32,11 @@ const OftenOrder = ({ db, onAddData }) => {
           ))}
         </div>
         <Modal
-        onAddData={onAddData}
-        modalId={modalId}
-        activeModal={activeModal}
-        setActiveModal={setActiveModal}
-      />
+          onAddData={onAddData}
+          modalId={modalId}
+          activeModal={activeModal}
+          setActiveModal={setActiveModal}
+        />
         <Link to="/menu">
           <span className="button button--outline">Показать все меню</span>{' '}
         </Link>

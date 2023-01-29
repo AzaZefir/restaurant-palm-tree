@@ -1,12 +1,11 @@
-import React from 'react'
-import './AboutUsPage.css'
-import aboutFirstImg from '../common/image/about-page-firstPic.png'
-import aboutSecondImg from '../common/image/about-page-firstPic.png'
+import React from 'react';
+import './AboutUsPage.css';
+import { aboutFirstImg, aboutSecondImg } from '../common/image/about-page-firstPic.png';
+// import  from '../common/image/about-page-firstPic.png'
 
 const AboutUsPage = () => {
   return (
     <div class="wrapper">
-      {/* <Header/> */}
       <main>
         <section class="about d-flex">
           <span class="about-greeting">About us</span>
@@ -48,9 +47,8 @@ const AboutUsPage = () => {
           </div>
         </section>
       </main>
-      {/* <Footer/> */}
     </div>
-  )
-}
+  );
+};
 
-export default AboutUsPage
+export default AboutUsPage;

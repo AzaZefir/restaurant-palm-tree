@@ -1,13 +1,13 @@
-import logo from '../common/image/logo.svg'
+import logo from '../common/image/logo.svg';
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Header.css';
 
-const Header = ({totalPrice,totalCount}) => {
+const Header = ({ totalPrice, totalCount }) => {
   return (
     <header className="header">
       <div className="container d-flex">
         <Link to="/">
-          <img className='header__logo' src={logo} alt="" />
+          <img className="header__logo" src={logo} alt="" />
         </Link>
         <div className="header-links d-flex">
           <Link to="/contacts">Контакты</Link>
@@ -53,4 +53,4 @@ const Header = ({totalPrice,totalCount}) => {
   );
 };
 
-export default Header
+export default Header;

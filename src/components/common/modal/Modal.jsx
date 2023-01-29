@@ -1,6 +1,5 @@
 import React from 'react';
 import './Modal.css';
-import { data } from '../../data/data';
 import modalOne from '../../common/image/modal-t.svg';
 import modalTwo from '../../common/image/modal-t1.svg';
 import modalThree from '../../common/image/modal-t2.svg';
@@ -27,7 +26,6 @@ export const Modal = ({ activeModal, setActiveModal, modalId, onAddData }) => {
           <div className="modal__image">
             <img src={modalId && modalId.modalImage} alt="" />
           </div>
-
           <div>
             <div className="modal-info d-flex">
               <h3 className="pizza-block__title">{modalId && modalId.name}</h3>
