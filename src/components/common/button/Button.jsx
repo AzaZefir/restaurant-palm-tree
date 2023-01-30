@@ -1,9 +1,6 @@
 import React from 'react'
-function a(name,text,id=2){
+import './Button.css'
 
-}
-
-// props == {edit,save}
 const Button = (props) => {
   return (
     <button>{props.children}</button>
