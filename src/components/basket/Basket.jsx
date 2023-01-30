@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import EmptyBasket from './emptyBasket/EmptyBasket';
 import BasketCard from './BasketCard';
 
-const Basket = ({ emptyBasketData, totalCount, totalPrice,onAddData,onClearCardData }) => {
+const Basket = ({
+  emptyBasketData,
+  totalCount,
+  totalPrice,
+  onAddData,
+  onClearCardData,
+  onDeleteData,
+}) => {
   return (
     <div className="wrapper">
       {emptyBasketData.length ? (
@@ -85,7 +92,7 @@ const Basket = ({ emptyBasketData, totalCount, totalPrice,onAddData,onClearCardD
                 <div className="content__items">
                   {emptyBasketData.map((el) => (
                     <BasketCard
-
+                      onDeleteData={onDeleteData}
                       key={el.id}
                       onAddData={onAddData}
                       totalCount={totalCount}
@@ -99,12 +106,10 @@ const Basket = ({ emptyBasketData, totalCount, totalPrice,onAddData,onClearCardD
                 <div className="cart__bottom">
                   <div className="cart__bottom-details">
                     <span>
-                      {' '}
-                      Всего пицц: <b>3 шт.</b>{' '}
+                      Всего пицц: <b>{totalCount} шт.</b>
                     </span>
                     <span>
-                      {' '}
-                      Сумма заказа: <b>900 сом</b>{' '}
+                      Сумма заказа: <b>{totalPrice} сом</b>
                     </span>
                   </div>
                   <div className="cart__bottom-buttons">
@@ -123,7 +128,6 @@ const Basket = ({ emptyBasketData, totalCount, totalPrice,onAddData,onClearCardD
                           stroke-linejoin="round"
                         />
                       </svg>
-
                       <span>Вернуться назад</span>
                     </Link>
                     <div className="button pay-btn">

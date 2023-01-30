@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutUsPage.css';
-import { aboutFirstImg, aboutSecondImg } from '../common/image/about-page-firstPic.png';
-// import  from '../common/image/about-page-firstPic.png'
+import aboutFirstImg from '../common/image/about-page-firstPic.png';
+import aboutSecondImg from '../common/image/about-page-firstPic.png';
 
 const AboutUsPage = () => {
   return (

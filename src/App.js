@@ -35,9 +35,23 @@ function App() {
       setEmptyBasketData(newData);
     }
   };
-  const onClearCardData = () =>{
-    setEmptyBasketData([])
-  }
+
+  const onDeleteData = (item) => {
+    const existData = emptyBasketData.find((el) => el.id === item.id);
+    if (existData.total === 1) {
+      const newData = emptyBasketData.filter((el) => el.id !== item.id);
+      setEmptyBasketData(newData);
+    } else {
+      const newData = emptyBasketData.map((el) =>
+        el.id === item.id ? { ...existData, total: existData.total - 1 } : el,
+      );
+      setEmptyBasketData(newData);
+    }
+  };
+
+  const onClearCardData = () => {
+    setEmptyBasketData([]);
+  };
 
   return (
     <div className="wrapper">
@@ -50,6 +64,7 @@ function App() {
           path="/basket"
           element={
             <Basket
+              onDeleteData={onDeleteData}
               onClearCardData={onClearCardData}
               onAddData={onAddData}
               totalPrice={totalPrice}
