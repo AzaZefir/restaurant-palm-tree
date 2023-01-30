@@ -1,7 +1,6 @@
 import slider1 from '../common/image/slider-img1.png';
 import slider2 from '../common/image/p1.webp';
 import slider3 from '../common/image/p4.webp';
-import slider4 from '../common/image/p3.jpg';
 
 export const data = [
   {
