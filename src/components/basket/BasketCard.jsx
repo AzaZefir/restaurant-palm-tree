@@ -3,7 +3,7 @@ import { CartMinusSvg } from '../common/svg/CartMinusSvg';
 import { CartPlusSvg } from '../common/svg/CartPlusSvg';
 import { CartRemoveSvg } from './../common/svg/CartRemoveSvg';
 
-const BasketCard = ({ price, item, name, modalImage, onAddData, onDeleteData }) => {
+const BasketCard = ({ taste,size, type, price, item, name, modalImage, onAddData, onDeleteData }) => {
   return (
     <div className="cart__item">
       <div className="cart__item-img">
@@ -11,7 +11,9 @@ const BasketCard = ({ price, item, name, modalImage, onAddData, onDeleteData }) 
       </div>
       <div className="cart__item-info">
         <h3>{name}</h3>
-        <p>тонкое тесто, 26 см.</p>
+        <p>
+          {type} тесто, {size} см., {taste.name}
+        </p>
       </div>
       <div className="cart__item-count">
         <div
@@ -29,7 +31,7 @@ const BasketCard = ({ price, item, name, modalImage, onAddData, onDeleteData }) 
       <div className="cart__item-price">
         <b>{item.total * price} сом</b>
       </div>
-      <div  onClick={() => onDeleteData(item)} className="cart__item-remove">
+      <div onClick={() => onDeleteData(item)} className="cart__item-remove">
         <div className="button button--outline button--circle">
           <CartRemoveSvg />
         </div>

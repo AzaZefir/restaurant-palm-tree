@@ -1,5 +1,5 @@
-@import "~slick-carousel/slick/slick.css"; 
-@import "~slick-carousel/slick/slick-theme.css";
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 @font-face {
   font-family: 'AmaticSC-Regular';
@@ -61,7 +61,7 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.about{
+.about {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -107,7 +107,6 @@ p {
   cursor: pointer;
 }
 
-
 .slider {
   padding: 50px 20px;
 }
@@ -124,7 +123,7 @@ p {
   overflow: hidden;
   margin: 0 10px;
   width: 95% !important;
-  height: 530px;
+  height: 400px;
   list-style: none;
   text-align: center;
   border: 2px solid #673ab7;
@@ -193,7 +192,7 @@ figure.effect-text-one img {
 figure.effect-text-one figcaption {
   top: auto;
   bottom: 0;
-  height: 50%;
+  height: 80%;
   text-align: left;
 }
 figure.effect-text-one h3,
@@ -229,12 +228,12 @@ figure.effect-text-one:hover p {
 .slider-right {
   cursor: pointer;
 }
-.hero .container{
+.hero .container {
   margin: 50px auto;
 }
 .hero-description {
   flex-direction: column;
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 .hero-description p {
   height: 200px;
@@ -273,8 +272,8 @@ figure.effect-text-one:hover p {
 }
 .often-order__card {
   transition: 1s ease;
-  width: 30%;
-  height: 75vh;
+  width: 22%;
+  height: 55vh;
   border: 5px solid #673ab7;
   margin: 30px 0;
   flex-direction: column;
@@ -282,7 +281,8 @@ figure.effect-text-one:hover p {
   align-items: flex-start;
   padding: 25px;
   /* background-position:; */
-  background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./components/common/image/card-img.jpg'), center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('./components/common/image/card-img.jpg'), center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -291,8 +291,7 @@ figure.effect-text-one:hover p {
   flex-direction: column;
 }
 .often-order__card p,
-.often-order__card span
- {
+.often-order__card span {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -315,7 +314,6 @@ figure.effect-text-one:hover p {
   color: #fff;
 }
 
-
 /* button css */
 .button {
   display: inline-block;
@@ -325,15 +323,19 @@ figure.effect-text-one:hover p {
   min-width: 100px;
   text-align: center;
   cursor: pointer;
-  transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   border: 1px solid transparent;
   user-select: none;
 }
-.button, .button span {
+.button,
+.button span {
   color: #fff;
 }
-.button i, .button span, .button path, .button svg {
-  transition: all .15s ease-in-out;
+.button i,
+.button span,
+.button path,
+.button svg {
+  transition: all 0.15s ease-in-out;
 }
 .button:hover {
   background-color: #35146f;
@@ -357,14 +359,16 @@ figure.effect-text-one:hover p {
 .button--black {
   background-color: #232323;
 }
-.button--black:hover, .button--black:active {
+.button--black:hover,
+.button--black:active {
   background-color: #3d3d3d;
 }
 .button--outline {
   background-color: #fff;
   border-color: #673ab7;
 }
-.button--outline, .button--outline span {
+.button--outline,
+.button--outline span {
   color: #673ab7;
 }
 .button--outline svg path {
@@ -373,7 +377,8 @@ figure.effect-text-one:hover p {
 .button--outline:hover {
   background-color: #673ab7;
 }
-.button--outline:hover, .button--outline:hover span {
+.button--outline:hover,
+.button--outline:hover span {
   color: #fff;
 }
 .button--outline:hover svg path {
