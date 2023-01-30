@@ -1,5 +1,5 @@
 import './Basket.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import EmptyBasket from './emptyBasket/EmptyBasket';
 import BasketCard from './BasketCard';
 import ClearCartSvg from '../common/svg/ClearCartSvg';
@@ -14,6 +14,8 @@ const Basket = ({
   onClearCardData,
   onDeleteData,
 }) => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
   return (
     <div className="wrapper">
       {emptyBasketData.length ? (
@@ -55,7 +57,10 @@ const Basket = ({
                     </span>
                   </div>
                   <div className="cart__bottom-buttons">
-                    <Link to="/menu" className="button button--outline button--add go-back-btn">
+                    <Link
+                      to=""
+                      onClick={goBack}
+                      className="button button--outline button--add go-back-btn">
                       <GoBackSvg />
                       <span>Вернуться назад</span>
                     </Link>

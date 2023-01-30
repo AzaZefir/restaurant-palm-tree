@@ -171,7 +171,17 @@ export const data = [
       },
       {
         id: 4,
-        img: slider4,
+        img: slider1,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      },
+      {
+        id: 5,
+        img: slider2,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      },
+      {
+        id: 6,
+        img: slider3,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       },
     ],
