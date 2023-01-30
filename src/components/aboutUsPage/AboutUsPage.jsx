@@ -44,6 +44,29 @@ const AboutUsPage = () => {
                 </p>
               </div>
             </div>
+            <div className='about-info_top d-flex'>
+              <iframe
+                width="50%"
+                height="400"
+                src="https://www.youtube.com/embed/GlrxcuEDyF8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+              <div>
+                <span>Промо видео</span>
+                <p>
+                  Dreams, he found himself transformed in his bed into a horrible vermin. He lay on
+                  his armour-like back, and if he lifted his head a little .
+                </p>
+                <p>
+                  Humblebrag la croix, pok pok aesthetic fam flexitarian wayfarers health goth
+                  sustainable try-hard brooklyn authentic live-edge. Showed a lady fitted out with a
+                  fur hat and fur boa who sat upright, raising a heavy fur muff thatcovered the
+                  whole of her lower arm towards the viewer.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
