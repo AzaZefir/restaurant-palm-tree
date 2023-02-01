@@ -11,11 +11,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 580,
+        price: '580',
         count: 1,
         type: [0, 1],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 1,
       },
       {
         id: 1,
@@ -23,11 +24,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/c84a4190f97d4364ad2b614bd0d26297_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 480,
+        price: '480',
         count: 1,
         type: [1],
         size: [0, 2],
         taste: [0, 1, 2, 3],
+        category: 2,
       },
       {
         id: 2,
@@ -35,11 +37,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/e2393e247dc64ecbbf23c82243c0a399_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 600,
+        price: '600',
         count: 1,
         type: [0, 1],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 2,
       },
       {
         id: 3,
@@ -47,11 +50,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/3f19abd29d2a477a960992ec2f30782c_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [0, 2],
         taste: [0, 1, 2, 3],
+        category: 2,
       },
       {
         id: 4,
@@ -59,11 +63,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/6a799a1a05a1428cb3b63edfa8cb0aeb_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [1, 2],
         taste: [0, 1, 2, 3],
+        category: 3,
       },
       {
         id: 5,
@@ -71,11 +76,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/7f300e9640544285ad377cd6ffcacc5e_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 0,
       },
       {
         id: 6,
@@ -83,11 +89,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/9cf62eab14b64d6a8ce0a9f5710f4f76_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 0,
       },
       {
         id: 7,
@@ -95,11 +102,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/152afd9328f044a884b9f8f1e7f28a8a_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 4,
       },
       {
         id: 8,
@@ -107,11 +115,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/02dc29c27c294172839bcee0f06cb4db_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [1, 2],
         taste: [0, 1, 2, 3],
+        category: 4,
       },
       {
         id: 9,
@@ -119,11 +128,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/d0c76679a4a34891b35635ec6803b8d5_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0],
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
+        category: 3,
       },
       {
         id: 10,
@@ -131,11 +141,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/2689742f19fb43cf810dc802aaeaa801_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [1, 2],
         taste: [0, 1, 2, 3],
+        category: 1,
       },
       {
         id: 11,
@@ -143,11 +154,12 @@ export const data = [
         modalImage:
           'https://dodopizza-a.akamaihd.net/static/Img/Products/8baa3a6169af4f1cbc6c251494cbb917_292x292.webp',
         text: 'Соберите свою пиццу 35 см с двумя разными вкусами',
-        price: 650,
+        price: '650',
         count: 1,
         type: [0, 1],
         size: [0, 1],
         taste: [0, 1, 2, 3],
+        category: 2,
       },
     ],
   },

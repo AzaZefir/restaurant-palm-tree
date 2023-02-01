@@ -7,6 +7,7 @@ import GoBackSvg from '../common/svg/GoBackSvg';
 import BasketSvg from '../common/svg/BasketSvg';
 
 const Basket = ({
+  onRemoveItem,
   emptyBasketData,
   totalCount,
   totalPrice,
@@ -14,8 +15,9 @@ const Basket = ({
   onClearCardData,
   onDeleteData,
 }) => {
-  const navigate = useNavigate();
-  const goBack = () => navigate(-1);
+  const navigate = useNavigate()
+  const goBack = () => navigate(-1)
+
   return (
     <div className="wrapper">
       {emptyBasketData.length ? (
@@ -36,6 +38,7 @@ const Basket = ({
                 <div className="content__items">
                   {emptyBasketData.map((el) => (
                     <BasketCard
+                      onRemoveItem={onRemoveItem}
                       onDeleteData={onDeleteData}
                       key={el.id}
                       onAddData={onAddData}
@@ -57,10 +60,7 @@ const Basket = ({
                     </span>
                   </div>
                   <div className="cart__bottom-buttons">
-                    <Link
-                      to=""
-                      onClick={goBack}
-                      className="button button--outline button--add go-back-btn">
+                    <Link to="" onClick={goBack} className="button button--outline button--add go-back-btn">
                       <GoBackSvg />
                       <span>Вернуться назад</span>
                     </Link>
