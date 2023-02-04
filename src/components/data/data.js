@@ -17,6 +17,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 1,
+        rating:'1',
       },
       {
         id: 1,
@@ -30,6 +31,7 @@ export const data = [
         size: [0, 2],
         taste: [0, 1, 2, 3],
         category: 2,
+        rating:'2',
       },
       {
         id: 2,
@@ -43,6 +45,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 2,
+        rating:'3',
       },
       {
         id: 3,
@@ -56,6 +59,7 @@ export const data = [
         size: [0, 2],
         taste: [0, 1, 2, 3],
         category: 2,
+        rating:'4',
       },
       {
         id: 4,
@@ -69,6 +73,7 @@ export const data = [
         size: [1, 2],
         taste: [0, 1, 2, 3],
         category: 3,
+        rating:'1',
       },
       {
         id: 5,
@@ -82,6 +87,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 0,
+        rating:'1',
       },
       {
         id: 6,
@@ -95,6 +101,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 0,
+        rating:'2',
       },
       {
         id: 7,
@@ -108,6 +115,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 4,
+        rating:'3',
       },
       {
         id: 8,
@@ -121,6 +129,7 @@ export const data = [
         size: [1, 2],
         taste: [0, 1, 2, 3],
         category: 4,
+        rating:'1',
       },
       {
         id: 9,
@@ -134,6 +143,7 @@ export const data = [
         size: [0, 1, 2],
         taste: [0, 1, 2, 3],
         category: 3,
+        rating:'2',
       },
       {
         id: 10,
@@ -147,6 +157,7 @@ export const data = [
         size: [1, 2],
         taste: [0, 1, 2, 3],
         category: 1,
+        rating:'4',
       },
       {
         id: 11,
@@ -160,6 +171,7 @@ export const data = [
         size: [0, 1],
         taste: [0, 1, 2, 3],
         category: 2,
+        rating:'3',
       },
     ],
   },

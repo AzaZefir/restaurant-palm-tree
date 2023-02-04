@@ -3,10 +3,28 @@ import './OurMenuPage.css';
 import searchIcon from '../common/image/search-normal 1.svg';
 import Categories from './categories/Categories';
 import Sort from './sort/Sort';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import Pagination from '../common/pagination/Pagination';
+import { Modal } from '../common/modal/Modal';
+import Card from '../main/oftenOrder/Card';
 
-const OurMenuPage = ({ db, setDb }) => {
+const OurMenuPage = ({
+  db,
+  setDb,
+  onAddData,
+  modalId,
+  activeModal,
+  setActiveModal,
+  onModalClick,
+}) => {
   const [selectedType, setSelectedType] = useState({ type: 'rating' });
+  const [searchQuary, setSearchQuary] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [prevPage] = useState(4);
+
+  const lastPage = currentPage * prevPage;
+  const firstPage = lastPage - prevPage;
+  const currentMenuPage = db.slice(firstPage, lastPage);
 
   const sortTypes = [
     { name: 'популярности', type: 'rating' },
@@ -14,9 +32,22 @@ const OurMenuPage = ({ db, setDb }) => {
     { name: 'алфавиту', type: 'name' },
   ];
 
+  const sortedData = useMemo(() => {
+    console.log('Функция отработала');
+    if (selectedType) {
+      return [...currentMenuPage].sort((a, b) =>
+        a[selectedType.type].localeCompare(b[selectedType.type]),
+      );
+    }
+    return currentMenuPage;
+  }, [selectedType, currentMenuPage]);
+
+  const sortedSearchedData = useMemo(() => {
+    return sortedData.filter((el) => el.name.toLowerCase().includes(searchQuary));
+  }, [sortedData, searchQuary]);
+
   const onSortData = (type) => {
     setSelectedType(type);
-    const sortedData = db.sort((a, b) => a[type.type].localeCompare(b[type.type]));
     setDb(sortedData);
   };
 
@@ -35,7 +66,12 @@ const OurMenuPage = ({ db, setDb }) => {
               activeSortType={selectedType.type}
             />
             <div className="search d-flex">
-              <input type="text" placeholder="Начать поиск" />
+              <input
+                type="text"
+                placeholder="Начать поиск"
+                value={searchQuary}
+                onChange={(e) => setSearchQuary(e.target.value)}
+              />
               <img src={searchIcon} alt="" />
             </div>
           </div>
@@ -43,40 +79,31 @@ const OurMenuPage = ({ db, setDb }) => {
         <section className="often-order">
           <div className="container d-flex">
             <div className="often-order__cards d-flex">
-              {db &&
-                db.map((el) => (
-                  <div key={el.id} className="often-order__card d-flex">
-                    <div className="d-flex">
-                      <h5>{el.name}</h5>
-                      <p>{el.text}</p>
-                    </div>
-                    <span>от {el.price} сом</span>
-                  </div>
-                ))}
+              {sortedSearchedData.map((el) => (
+                <Card
+                  onModalClick={onModalClick}
+                  onAddData={onAddData}
+                  key={el.id}
+                  modalId={modalId}
+                  activeModal={activeModal}
+                  setActiveModal={setActiveModal}
+                  item={el}
+                  index={el.id}
+                  {...el}
+                />
+              ))}
             </div>
-            <div className="pagination">
-              <a className=" button button--outline" href="./ourMenu.html">
-                1
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                2
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                3
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                4
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                5
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                6
-              </a>
-              <a className=" button button--outline" href="./ourMenu.html">
-                7
-              </a>
-            </div>
+            <Pagination
+              setCurrentPage={setCurrentPage}
+              prevPage={prevPage}
+              totalPages={db.length}
+            />
+            <Modal
+              onAddData={onAddData}
+              modalId={modalId}
+              activeModal={activeModal}
+              setActiveModal={setActiveModal}
+            />
           </div>
         </section>
       </main>
