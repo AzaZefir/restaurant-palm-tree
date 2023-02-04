@@ -11,7 +11,7 @@ const Pagination = ({ totalPages, setCurrentPage, prevPage }) => {
   return (
     <div className="pagination">
       {pages.map((page) => (
-        <button className="button button--outline" onClick={() => setCurrentPage(page)}>
+        <button key={page} className="button button--outline" onClick={() => setCurrentPage(page)}>
           {page}
         </button>
       ))}
