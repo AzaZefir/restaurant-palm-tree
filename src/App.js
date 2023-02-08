@@ -8,10 +8,10 @@ import Main from './components/main/Main';
 import OurMenuPage from './components/ourMenuPage/OurMenuPage';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { data } from './components/data/data';
+import axios from 'axios';
 
 function App() {
-  const [db, setDb] = useState(data[0].oftenOrderCards);
+  const [db, setDb] = useState([]);
   const [emptyBasketData, setEmptyBasketData] = useState([]);
   const [activeModal, setActiveModal] = useState(true);
   const [modalId, setModalId] = useState(null);
@@ -74,7 +74,12 @@ function App() {
       localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : [],
     );
   }, []);
-  
+
+  useEffect(()=>{
+    axios.get('http://localhost:3000/db.json')
+    .then(({data}) => setDb(data.data[0].oftenOrderCards))
+  },[])
+
   return (
     <div className="wrapper">
       <Header totalPrice={totalPrice} totalCount={totalCount} />
