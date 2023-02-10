@@ -15,6 +15,7 @@ function App() {
   const [emptyBasketData, setEmptyBasketData] = useState([]);
   const [activeModal, setActiveModal] = useState(true);
   const [modalId, setModalId] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const totalPrice = emptyBasketData.reduce(
     (prevVal, curVal) => prevVal + curVal.total * curVal.price,
@@ -75,10 +76,12 @@ function App() {
     );
   }, []);
 
-  useEffect(()=>{
-    axios.get('http://localhost:3000/db.json')
-    .then(({data}) => setDb(data.data[0].oftenOrderCards))
-  },[])
+  useEffect(() => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setDb(data.data[0].oftenOrderCards);
+      setIsLoading(false);
+    });
+  }, []);
 
   return (
     <div className="wrapper">
@@ -88,6 +91,8 @@ function App() {
           path="/"
           element={
             <Main
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
               onModalClick={onModalClick}
               modalId={modalId}
               setModalId={setModalId}

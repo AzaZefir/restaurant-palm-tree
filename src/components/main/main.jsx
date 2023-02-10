@@ -12,6 +12,8 @@ const Main = ({
   setModalId,
   setActiveModal,
   activeModal,
+  isLoading,
+  setIsLoading
 }) => {
   return (
     <main>
@@ -19,6 +21,8 @@ const Main = ({
       <Slide />
       <Hero />
       <OftenOrder
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
         onModalClick={onModalClick}
         modalId={modalId}
         setModalId={setModalId}
