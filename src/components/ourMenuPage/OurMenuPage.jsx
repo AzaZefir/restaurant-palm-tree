@@ -22,10 +22,14 @@ const OurMenuPage = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [prevPage] = useState(4);
 
+  // const dataBase = db[0].oftenOrderCards
+
   const lastPage = currentPage * prevPage;
   const firstPage = lastPage - prevPage;
   const currentMenuPage = db.slice(firstPage, lastPage);
 
+  // console.log(db[0].oftenOrderCards);
+  
   const sortTypes = [
     { name: 'популярности', type: 'rating' },
     { name: 'цене', type: 'price' },

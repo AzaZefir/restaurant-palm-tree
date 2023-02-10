@@ -12,6 +12,7 @@ import axios from 'axios';
 
 function App() {
   const [db, setDb] = useState([]);
+  const [sliderData, setSliderData] = useState([]);
   const [emptyBasketData, setEmptyBasketData] = useState([]);
   const [activeModal, setActiveModal] = useState(true);
   const [modalId, setModalId] = useState(null);
@@ -67,6 +68,7 @@ function App() {
   };
 
   const onClearCardData = () => {
+    setEmptyBasketData(localStorage.clear());
     setEmptyBasketData([]);
   };
 
@@ -83,6 +85,11 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
+      setSliderData(data.data[1].sliderCardData);
+    });
+  }, []);
   return (
     <div className="wrapper">
       <Header totalPrice={totalPrice} totalCount={totalCount} />
@@ -91,6 +98,7 @@ function App() {
           path="/"
           element={
             <Main
+              sliderData = {sliderData}
               isLoading={isLoading}
               setIsLoading={setIsLoading}
               onModalClick={onModalClick}

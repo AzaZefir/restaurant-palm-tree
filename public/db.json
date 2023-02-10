@@ -176,32 +176,32 @@
       "sliderCardData": [
         {
           "id": 1,
-          "img": "",
+          "img": "https://media-cdn.tripadvisor.com/media/photo-s/11/34/8e/cf/facade-du-resto.jpg",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         },
         {
           "id": 2,
-          "img": "",
+          "img": "https://res.cloudinary.com/vabalaud/image/upload/c_fill,dpr_3.0,f_auto,g_auto,h_225,q_auto,w_400/c_fill,h_225,w_400/v1/restoran_kalevijahtklubi/bkGlnPlA?pgw=1",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         },
         {
           "id": 3,
-          "img": "",
+          "img": "https://hygge.pereresto.ee/wp-content/uploads/2022/01/Pere-1-1024x819.jpg",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         },
         {
           "id": 4,
-          "img": "",
+          "img": "https://media-cdn.tripadvisor.com/media/photo-s/15/df/c4/70/une-salle-spacieuse-pour.jpg",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         },
         {
           "id": 5,
-          "img": "",
+          "img": "https://assets2.resto.ru/uploads/ckeditor/pictures/13578/content_xGs53qGamkkOLSKABo4bYxZvPFB6Lt-yhNMXrUhkHV0_02AFVnZQ4E_b3vBjjwCW0h-lYuNrhWTv9CNPJPL6Mvg.jpg",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         },
         {
           "id": 6,
-          "img": "",
+          "img": "https://t4.ftcdn.net/jpg/02/54/93/61/360_F_254936166_5MFxlGv7PNPw4VmpuNNQxlU0K2D4f7Ya.jpg",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         }
       ]

@@ -20,7 +20,7 @@ const OftenOrder = ({
         <h3>Часто заказывают</h3>
         <div className="often-order__cards d-flex">
           {isLoading
-            ? new Array(12).map((item) => <MyLoader key={item} />)
+            ? [...new Array(12)].map((item) => <MyLoader key={item} />)
             : db.map((item) => (
                 <Card
                   onModalClick={onModalClick}

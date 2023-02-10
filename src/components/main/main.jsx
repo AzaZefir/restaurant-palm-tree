@@ -13,12 +13,13 @@ const Main = ({
   setActiveModal,
   activeModal,
   isLoading,
-  setIsLoading
+  setIsLoading,
+  sliderData
 }) => {
   return (
     <main>
       <About />
-      <Slide />
+      <Slide sliderData={sliderData}/>
       <Hero />
       <OftenOrder
         isLoading={isLoading}

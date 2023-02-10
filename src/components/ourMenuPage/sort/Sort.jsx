@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import SortLabelSvg from '../../common/svg/SortLabelSvg';
 
@@ -28,7 +27,7 @@ const Sort = ({ sortTypes, onSortData, activeSortType }) => {
             <ul>
               {sortTypes.map((item, index) => (
                 <li
-                  key={index}
+                  key={item}
                   className={activeSortType === index ? 'active' : ''}
                   onClick={() => onSelectedSort(item)}>
                   {item.name}
