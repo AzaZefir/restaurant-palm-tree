@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-const Categories = ({ db, setDb }) => {
+const Categories = ({ menuData, setMenuData }) => {
   const [activeItem, setActiveItem] = useState('');
-  const [categoryFilter] = useState(db);
+  const [categoryFilter] = useState(menuData);
   const availableCategories = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
   const onFilterData = (item) => {
     if (item === '') {
-      setDb(categoryFilter);
+      setMenuData(categoryFilter);
       return;
     }
     const result = categoryFilter.filter((el) => el.category === item
     );
-    setDb(result);
+    setMenuData(result);
   };
 
   const onSelectCat = (index) => {

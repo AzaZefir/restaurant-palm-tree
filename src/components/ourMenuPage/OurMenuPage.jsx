@@ -9,26 +9,22 @@ import { Modal } from '../common/modal/Modal';
 import Card from '../main/oftenOrder/Card';
 
 const OurMenuPage = ({
-  db,
-  setDb,
   onAddData,
   modalId,
   activeModal,
   setActiveModal,
   onModalClick,
+  menuData,
+  setMenuData
 }) => {
   const [selectedType, setSelectedType] = useState({ type: 'rating' });
   const [searchQuary, setSearchQuary] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [prevPage] = useState(4);
-
-  // const dataBase = db[0].oftenOrderCards
+  const [prevPage] = useState(12);
 
   const lastPage = currentPage * prevPage;
   const firstPage = lastPage - prevPage;
-  const currentMenuPage = db.slice(firstPage, lastPage);
-
-  // console.log(db[0].oftenOrderCards);
+  const currentMenuPage = menuData.slice(firstPage, lastPage);
   
   const sortTypes = [
     { name: 'популярности', type: 'rating' },
@@ -37,7 +33,6 @@ const OurMenuPage = ({
   ];
 
   const sortedData = useMemo(() => {
-    console.log('Функция отработала');
     if (selectedType) {
       return [...currentMenuPage].sort((a, b) =>
         a[selectedType.type].localeCompare(b[selectedType.type]),
@@ -52,7 +47,7 @@ const OurMenuPage = ({
 
   const onSortData = (type) => {
     setSelectedType(type);
-    setDb(sortedData);
+    setMenuData(sortedData);
   };
 
   return (
@@ -63,7 +58,7 @@ const OurMenuPage = ({
         </section>
         <section className="search-block">
           <div className="container d-flex">
-            <Categories db={db} setDb={setDb} />
+            <Categories menuData={menuData} setMenuData={setMenuData} />
             <Sort
               sortTypes={sortTypes}
               onSortData={onSortData}
@@ -100,7 +95,7 @@ const OurMenuPage = ({
             <Pagination
               setCurrentPage={setCurrentPage}
               prevPage={prevPage}
-              totalPages={db.length}
+              totalPages={menuData.length}
             />
             <Modal
               onAddData={onAddData}

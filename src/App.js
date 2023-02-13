@@ -13,6 +13,7 @@ import axios from 'axios';
 function App() {
   const [db, setDb] = useState([]);
   const [sliderData, setSliderData] = useState([]);
+  const [menuData, setMenuData] = useState([]);
   const [emptyBasketData, setEmptyBasketData] = useState([]);
   const [activeModal, setActiveModal] = useState(true);
   const [modalId, setModalId] = useState(null);
@@ -81,15 +82,17 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:3000/db.json').then(({ data }) => {
       setDb(data.data[0].oftenOrderCards);
+      setSliderData(data.data[1].sliderCardData);
+      setMenuData(data.data[2].menuCards);
       setIsLoading(false);
     });
   }, []);
 
-  useEffect(() => {
-    axios.get('http://localhost:3000/db.json').then(({ data }) => {
-      setSliderData(data.data[1].sliderCardData);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get('http://localhost:3000/db.json').then(({ data }) => {
+  //     setSliderData(data.data[1].sliderCardData);
+  //   });
+  // }, []);
   return (
     <div className="wrapper">
       <Header totalPrice={totalPrice} totalCount={totalCount} />
@@ -116,6 +119,8 @@ function App() {
           path="/menu"
           element={
             <OurMenuPage
+              menuData={menuData}
+              setMenuData={setMenuData}
               db={db}
               setDb={setDb}
               onAddData={onAddData}

@@ -12,7 +12,6 @@ const OftenOrder = ({
   setModalId,
   onModalClick,
   isLoading,
-  setIsLoading,
 }) => {
   return (
     <section className="often-order">
