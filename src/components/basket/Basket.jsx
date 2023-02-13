@@ -1,4 +1,4 @@
-import './Basket.css';
+import './Basket.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import EmptyBasket from './emptyBasket/EmptyBasket';
 import BasketCard from './BasketCard';

@@ -103,6 +103,7 @@ p {
 .button svg {
   transition: all 0.15s ease-in-out;
 }
+
 .button:hover {
   background-color: #35146f;
 }

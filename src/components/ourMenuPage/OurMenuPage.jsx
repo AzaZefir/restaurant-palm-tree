@@ -1,5 +1,5 @@
 import React from 'react';
-import './OurMenuPage.css';
+import './OurMenuPage.scss';
 import searchIcon from '../common/image/search-normal 1.svg';
 import Categories from './categories/Categories';
 import Sort from './sort/Sort';
