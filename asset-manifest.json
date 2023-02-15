@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/restaurant-palm-tree/static/css/main.03fa8738.css",
+    "main.js": "/restaurant-palm-tree/static/js/main.b78d11d5.js",
+    "static/media/modal-t1.svg": "/restaurant-palm-tree/static/media/modal-t1.192405403adccfcc04bb82cfcb6f7772.svg",
+    "static/media/footer-bg.png": "/restaurant-palm-tree/static/media/footer-bg.743db5f2b2d2d770c846.png",
+    "static/media/ourMenu-bg.png": "/restaurant-palm-tree/static/media/ourMenu-bg.0f2871762cee3730fef6.png",
+    "static/media/Homepage+Banner+1900x940+V16.jpg": "/restaurant-palm-tree/static/media/Homepage+Banner+1900x940+V16.c419c2a0e257b31145d2.jpg",
+    "static/media/about-page-bg.png": "/restaurant-palm-tree/static/media/about-page-bg.8b49adc71a0d38421414.png",
+    "static/media/slogan-bg.png": "/restaurant-palm-tree/static/media/slogan-bg.4750eb2df3ac30fde501.png",
+    "static/media/about-page-firstPic.png": "/restaurant-palm-tree/static/media/about-page-firstPic.0007316eb6deda47315d.png",
+    "static/media/card-img.jpg": "/restaurant-palm-tree/static/media/card-img.0bc3e3d5eaeba8cc10e4.jpg",
+    "static/media/AmaticSC-Regular.ttf": "/restaurant-palm-tree/static/media/AmaticSC-Regular.fd9971162ff94dc53856.ttf",
+    "static/media/modal-t3.svg": "/restaurant-palm-tree/static/media/modal-t3.408f30fe793e05a72ce926060e140ed8.svg",
+    "static/media/modal-t2.svg": "/restaurant-palm-tree/static/media/modal-t2.1ea5e90c62b57b9c9c66be72fd90d06b.svg",
+    "static/media/modal-t.svg": "/restaurant-palm-tree/static/media/modal-t.9328027684dd57c9629ca6d2da97e09a.svg",
+    "static/media/logo.svg": "/restaurant-palm-tree/static/media/logo.ee03491d3dafe82904078b922cb5399f.svg",
+    "static/media/emptyBusketSvg.svg": "/restaurant-palm-tree/static/media/emptyBusketSvg.118093d592171fd0e80c711744f3fceb.svg",
+    "static/media/Group 63.svg": "/restaurant-palm-tree/static/media/Group 63.d0f9d1d99ad97a673a544d1f53428df9.svg",
+    "static/media/slick.svg": "/restaurant-palm-tree/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/restaurant-palm-tree/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/restaurant-palm-tree/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slider-left.svg": "/restaurant-palm-tree/static/media/slider-left.132e1b6d61c14c7c5912.svg",
+    "static/media/phone.svg": "/restaurant-palm-tree/static/media/phone.2f3b81119d49d88aa66baa1a0fd1477d.svg",
+    "static/media/slick.woff": "/restaurant-palm-tree/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/twit.svg": "/restaurant-palm-tree/static/media/twit.74179a555171cce26cf2fb7dc3a80993.svg",
+    "static/media/slider0right.svg": "/restaurant-palm-tree/static/media/slider0right.765d90dd720c53ee2c63.svg",
+    "static/media/mail.svg": "/restaurant-palm-tree/static/media/mail.57dfe73d5e089d14ec3510809dd0994a.svg",
+    "static/media/google 1.svg": "/restaurant-palm-tree/static/media/google 1.e49524aea17c4bd6caff61847bfe7f9c.svg",
+    "index.html": "/restaurant-palm-tree/index.html",
+    "static/media/facebook 1.svg": "/restaurant-palm-tree/static/media/facebook 1.a3ae0aaf38d240aae492a64203ed2e2e.svg",
+    "static/media/search-normal 1.svg": "/restaurant-palm-tree/static/media/search-normal 1.3a08e2f3c28f273dd68ff066811f35f0.svg",
+    "main.03fa8738.css.map": "/restaurant-palm-tree/static/css/main.03fa8738.css.map",
+    "main.b78d11d5.js.map": "/restaurant-palm-tree/static/js/main.b78d11d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03fa8738.css",
+    "static/js/main.b78d11d5.js"
+  ]
+}
