@@ -1,0 +1,62 @@
+$background-color-blue: rgb(211, 241, 247);
+$background-color-green: rgb(62, 166, 71);
+$background-color-yellow: rgb(209, 209, 69);
+
+$fonts: 16px;
+$fonts: 18px;
+$fonts: 20px;
+
+@mixin font-family {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin d-flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test {
+  background-color: $background-color-blue;
+  @include font-family();
+  height: 70vh;
+  h1 {
+    color: red;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .test__block {
+    @include d-flex-col-center();
+    > p {
+      color: blue;
+      strong {
+        color: green;
+      }
+    }
+    .test__block_cards {
+      @include d-flex-center();
+      width: 100%;
+      margin-top: 20px;
+      .test__block_card {
+        background-color: burlywood;
+        padding: 30px;
+        @include d-flex-col-center();
+        p {
+          color: yellow;
+        }
+        button {
+          padding: 20px 30px;
+          background-color: rgb(69, 94, 116);
+        }
+      }
+    }
+  }
+}

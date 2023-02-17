@@ -2,6 +2,7 @@ import { Slide } from '../common/slider/Slide';
 import { About } from './about/About';
 import Hero from './hero/Hero';
 import OftenOrder from './oftenOrder/OftenOrder';
+import './Main.scss';
 
 const Main = ({
   db,
@@ -14,12 +15,12 @@ const Main = ({
   activeModal,
   isLoading,
   setIsLoading,
-  sliderData
+  sliderData,
 }) => {
   return (
     <main>
       <About />
-      <Slide sliderData={sliderData}/>
+      <Slide sliderData={sliderData} />
       <Hero />
       <OftenOrder
         isLoading={isLoading}
@@ -33,6 +34,25 @@ const Main = ({
         setDb={setDb}
         onAddData={onAddData}
       />
+      {/* <div className="test">
+        <h1>hello from react</h1>
+        <div className="test__block">
+          <p>
+            Lorem ipsum, dolor sit amet <strong>consectetur adipisicing</strong> elit. Laboriosam,
+            itaque!
+          </p>
+          <div className='test__block_cards'>
+            <div className="test__block_card">
+              <p>Lorem, ipsum.</p>
+              <button>click</button>
+            </div>
+            <div className="test__block_card">
+              <p>Lorem, ipsum.</p>
+              <button>click</button>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </main>
   );
 };
