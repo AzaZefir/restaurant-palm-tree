@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/restaurant-palm-tree/static/css/main.33b3d2bf.css",
-    "main.js": "/restaurant-palm-tree/static/js/main.8d82aaf9.js",
+    "main.js": "/restaurant-palm-tree/static/js/main.a1558185.js",
     "static/media/modal-t1.svg": "/restaurant-palm-tree/static/media/modal-t1.192405403adccfcc04bb82cfcb6f7772.svg",
     "static/media/footer-bg.png": "/restaurant-palm-tree/static/media/footer-bg.743db5f2b2d2d770c846.png",
     "static/media/ourMenu-bg.png": "/restaurant-palm-tree/static/media/ourMenu-bg.0f2871762cee3730fef6.png",
@@ -31,10 +31,10 @@
     "static/media/facebook 1.svg": "/restaurant-palm-tree/static/media/facebook 1.a3ae0aaf38d240aae492a64203ed2e2e.svg",
     "static/media/search-normal 1.svg": "/restaurant-palm-tree/static/media/search-normal 1.3a08e2f3c28f273dd68ff066811f35f0.svg",
     "main.33b3d2bf.css.map": "/restaurant-palm-tree/static/css/main.33b3d2bf.css.map",
-    "main.8d82aaf9.js.map": "/restaurant-palm-tree/static/js/main.8d82aaf9.js.map"
+    "main.a1558185.js.map": "/restaurant-palm-tree/static/js/main.a1558185.js.map"
   },
   "entrypoints": [
     "static/css/main.33b3d2bf.css",
-    "static/js/main.8d82aaf9.js"
+    "static/js/main.a1558185.js"
   ]
 }
