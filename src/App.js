@@ -80,7 +80,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/db.json').then(({ data }) => {
+    axios.get('http://localhost:3000/db.json').then(({ data }) => {
       setDb(data.data[0].oftenOrderCards);
       setSliderData(data.data[1].sliderCardData);
       setMenuData(data.data[2].menuCards);
