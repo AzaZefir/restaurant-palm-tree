@@ -91,7 +91,7 @@ p {
   cursor: pointer;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   border: 1px solid transparent;
-  user-select: none;
+  /* user-select: none; */
 }
 .button,
 .button span {

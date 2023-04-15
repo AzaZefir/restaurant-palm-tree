@@ -41,7 +41,7 @@
   color: #fff;
   text-transform: uppercase;
   font-size: 1.25em;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   position: absolute;
   top: 0;
   left: 0;

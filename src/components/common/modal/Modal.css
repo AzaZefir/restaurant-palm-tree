@@ -118,7 +118,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
-  user-select: none;
+  /* user-select: none; */
 }
 .pizza-block__selector ul li.active {
   background: #ffffff;
